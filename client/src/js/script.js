@@ -24,12 +24,14 @@ import $ from "jquery";
   var urlParams = new URLSearchParams(window.location.search);
   var showItems = urlParams.get('show-recepts');
   var localLink = 'http://localhost:5000';
+  var webLink = 'https://dashboard.heroku.com';
+  
   var showItem = urlParams.get('id');
 
   if (showItems) {
     $.ajax({
       type: 'GET',
-      url: `${localLink}/api/data/getRecepts?find=${showItems}`,
+      url: `${webLink}/api/data/getRecepts?find=${showItems}`,
       async: false,
       success: gererateRecepts,
       error: function(error){
@@ -41,7 +43,7 @@ import $ from "jquery";
   if (showItem) {
     $.ajax({
       type: 'GET',
-      url: `${localLink}/api/data/getRecept?find=${showItems}&id=${showItem}`,
+      url: `${webLink}/api/data/getRecept?find=${showItems}&id=${showItem}`,
       async: false,
       success: gererateRecept,
       error: function(error){
