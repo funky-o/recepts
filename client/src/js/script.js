@@ -34,9 +34,7 @@ import $ from "jquery";
       url: `${webLink}/api/data/getRecept?find=${showItems}&id=${showItem}`,
       async: false,
       success: function(element) {
-        console.log(element);
         var recept = element;
-        console.log(recept);
         $('.item-img').attr('src', `images/${showItems}/${recept.src}`);
         $('.item-name').text(recept.name);
         $('.item-description').text(recept.description);
@@ -68,7 +66,6 @@ import $ from "jquery";
       url: `${webLink}/api/data/getRecepts?find=${showItems}`,
       async: false,
       success: function(data) {
-        console.log(data);
         var arrayRecepts = data;
         var block = $('.js-keep');
         var template = $('.js-save').detach();
