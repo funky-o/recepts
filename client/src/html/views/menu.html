@@ -1,0 +1,96 @@
+<%= _.template(require('./../includes/header.html'))() %>
+
+<div id='cssmenu' class="align-center">
+  <ul>
+    <li ><a href='index.html'><span>Главная</span></a></li>
+    <li class="active"><a href='menu.html'><span>Меню</span></a></li>
+  </ul>
+</div>
+</header>
+
+
+<section id="container">
+    <div class="wrap-container clearfix">
+      <div id="main-content">
+        <div class="wrap-content zerogrid ">
+          <article class="background-gray">
+            <div class="art-header">
+              <hr class="line-2">
+              <h2>Наши рецепты</h2>
+            </div>
+            <div class="art-content">
+              <div class="row">
+                <div class="col-1-3">
+                  <div class="wrap-col">
+                    <div class="item-container">
+                      <a class="example-image-link js-link-show-items" data-info="pizza"  data-title="картинка">
+                        <div class="item-caption">
+                          <div class="item-caption-inner">
+                            <div class="item-caption-inner1">
+                              <h3>Пицца</h3>
+                              <!-- <span>Only</span> -->
+                            </div>
+                          </div>
+                        </div>
+                        <img class="example-image" src="images/menu/menu-1.jpg" alt=""/>
+                      </a>
+                    </div>
+                    <div class="item-container">
+                      <a class="example-image-link js-link-show-items" data-info="soups"  data-title="картинка">
+                        <div class="item-caption">
+                          <div class="item-caption-inner">
+                            <div class="item-caption-inner1">
+                              <h3>Супы</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <img class="example-image" src="images/menu/menu-4.jpg" alt=""/>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1-3">
+                  <div class="wrap-col">
+                    <div class="item-container">
+                      <a class="example-image-link js-link-show-items" data-info="salads"  data-title="картинка">
+                        <div class="item-caption">
+                          <div class="item-caption-inner">
+                            <div class="item-caption-inner1">
+                              <h3>Салаты</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <img class="example-image" src="images/menu/menu-2.jpg" alt=""/>
+                      </a>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-1-3">
+                  <div class="wrap-col">
+                    <div class="item-container">
+                      <a class="example-image-link js-link-show-items" data-info="snacks"  data-title="картинка">
+                        <div class="item-caption">
+                          <div class="item-caption-inner">
+                            <div class="item-caption-inner1">
+                              <h3>Закуски</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <img class="example-image" src="images/menu/menu-3.jpg" alt=""/>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="line">
+
+<%= _.template(require('./../includes/footer.html'))() %>
+<!-- <%= _.template(require('./../includes/data.html'))() %> -->
