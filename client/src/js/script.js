@@ -103,4 +103,19 @@ import $ from "jquery";
     window.location.href = `recept.html?show-recepts=salads&id=9`;    
   });
 
+  
+
+  $.ajax({
+    type: 'GET',
+    url: `https://warm-hollows-53332.herokuapp.com/api/data/getRecept?find=pizza&id=2`,
+    async: false,
+    success: function(element) {
+      console.log(element);
+      
+      
+    },
+    error: function(error){
+      console.log("Ошибка", error);
+    }
+  });
 })();
