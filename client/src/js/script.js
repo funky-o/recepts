@@ -24,7 +24,7 @@ import $ from "jquery";
   var urlParams = new URLSearchParams(window.location.search);
   var showItems = urlParams.get('show-recepts');
   var localLink = 'http://localhost:5000';
-  var webLink = 'https://dashboard.heroku.com';
+  var webLink = 'https://warm-hollows-53332.herokuapp.com/';
   
   var showItem = urlParams.get('id');
 
