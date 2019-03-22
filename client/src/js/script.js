@@ -54,6 +54,7 @@ import $ from "jquery";
 
 
   function gererateRecepts (data) {
+    console.log(data);
     var arrayRecepts = data;
     var block = $('.js-keep');
     var template = $('.js-save').detach();
@@ -70,6 +71,7 @@ import $ from "jquery";
   }
 
   function gererateRecept (element) {
+    console.log(element);
     var recept = element;
     console.log(recept);
     $('.item-img').attr('src', `images/${showItems}/${recept.src}`);
