@@ -1,12 +1,16 @@
 const express = require('express');
 const dataRoutes = require('./routes/data');
+const mongoose = require('mongoose');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const path = require('path');
+const keys = require('./config/keys')
 
-
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
+  .then(() => console.log('MongoDB connected.'))
+  .catch((error) => console.log(error))
 
 app.use(morgan('dev')); // красивое логирование запросов
 app.use(bodyParser.urlencoded({extended: true})); // для разбора json
