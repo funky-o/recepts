@@ -1,15 +1,10 @@
 const errorHandler = require('../utils/errorHandler');
-const db = require('../shared/recepts.json');
 const models = require('../models/recept');
 
 module.exports.getRecepts = async function(req, res) {
   try {
     var category = req.query.find;
-    // console.log(models);
-    console.log(category, category.length);
     const recepts = await models[category].find();
-    console.log(recepts);
-    console.log('recepts');
       res.status(200).json(recepts);
   } catch(e) {
       errorHandler(res, e);
